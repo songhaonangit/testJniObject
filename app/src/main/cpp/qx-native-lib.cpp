@@ -41,7 +41,6 @@ Java_com_getcharmsmart_testjniobject_MainActivity_call(JNIEnv * env, jobject obj
     jbyteArray ret = env->NewByteArray(6);
 
 
-
     int len = 6;
     if (len > 0) {
 
@@ -53,21 +52,6 @@ Java_com_getcharmsmart_testjniobject_MainActivity_call(JNIEnv * env, jobject obj
         env->SetObjectField(classobj, text, ret);
     }
 
-
-
-//    // Get the object field, returns JObject (because Array is instance of Object)
-//    jobject mvdata = env->GetObjectField (classobj, text);
-//
-//    // Cast it to a jdoublearray
-//    jdoubleArray * arr = reinterpret_cast<jdoubleArray*>(&mvdata);
-//
-//
-//
-//    // Get the elements (you probably have to fetch the length of the array as well
-//    double * data = env->GetDoubleArrayElements(*arr, NULL);
-//
-//    // Don't forget to release it
-//    env->ReleaseDoubleArrayElements(*arr, data, 0);
 
     return classobj;
 
